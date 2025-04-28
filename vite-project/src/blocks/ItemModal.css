@@ -47,8 +47,6 @@
 } */
 
 .image-modal__image-container {
-  background-color: white; /* Add this line */
-  z-index: 2; /* Add this line */
   margin: 0;
   position: absolute;
   top: 50%;
