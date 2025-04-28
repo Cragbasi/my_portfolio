@@ -1,0 +1,57 @@
+.header {
+  font-family: "CabinetGrotesk", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  padding: 32px 40px 28px;
+  width: 1360px;
+  height: 40px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo {
+  padding: 0 20px 0 0;
+  width: 89px;
+  height: 40px;
+}
+.header__date-and-location {
+  margin: 0;
+  padding: 0;
+}
+.header__avatar {
+  padding: 0 0 0 12px;
+  width: 40px;
+  height: 40px;
+}
+.header__container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.header__left-container {
+  display: flex;
+  flex-direction: row;
+}
+.header__profile-name {
+  display: flex;
+  flex-direction: row;
+  line-height: 100%;
+}
+.header__add-clothes-button {
+  font-family: "CabinetGrotesk", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  margin: 0 20px 0 0;
+  display: flex;
+  flex-direction: row;
+  font-size: 20px;
+  line-height: 24px;
+  background-color: transparent;
+  border: none;
+}

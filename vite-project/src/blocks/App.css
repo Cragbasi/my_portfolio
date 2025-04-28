@@ -1,0 +1,21 @@
+@font-face {
+  src: url("../vendor/CabinetGrotesk-Regular.woff") format("woff");
+  font-family: "CabinetGrotesk";
+}
+@font-face {
+  src: url("../vendor/CabinetGrotesk-Bold.woff") format("woff");
+  font-family: "CabinetGrotesk";
+}
+.page {
+  font-family: "CabinetGrotesk", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  /* margin: 0 40px;
+  width: 1360px; */
+
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; */
+}
