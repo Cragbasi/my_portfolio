@@ -1,5 +1,4 @@
 import "../blocks/ItemModal.css";
-import "../blocks/ModalWithForm.css";
 import closeImage from "../assets/closeImage.svg";
 import { useEffect } from "react";
 function ItemModal({ isOpen, onClose, name, weather, link }) {
