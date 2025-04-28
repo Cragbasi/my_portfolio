@@ -1,7 +1,7 @@
 import "../blocks/ModalWithForm.css";
 
 import close from "../assets/close.svg";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 function ModalWithForm({ title, name, buttonText, onClose }) {
   const handleOverlayClick = (e) => {
     if (e.target === e.currentTarget) {

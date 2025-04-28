@@ -36,7 +36,6 @@ function App() {
     setIsItemModalOpen(false);
   };
   useEffect(() => {
-    // API call goes here
     const api = new weatherApi({
       baseUrl: `https://api.openweathermap.org/data/2.5/weather?lat=${coordinate.latitude}&lon=${coordinate.longitude}&units=imperial&appid=${APIkey}`,
     });
@@ -47,7 +46,7 @@ function App() {
         setWeatherData(res);
       })
       .catch((err) => {
-        console.error("API error:", err); // log the error to the console
+        console.error("API error:", err);
       });
   }, []);
 
@@ -81,7 +80,3 @@ function App() {
 }
 
 export default App;
-
-{
-  /* <ItemModal isOpen={isItemModalOpen} onClose={handleItemModalClose} /> */
-}

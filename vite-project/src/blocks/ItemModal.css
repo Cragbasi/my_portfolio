@@ -28,24 +28,6 @@
   transition: opacity 1s ease-out;
   transition-delay: 0s;
 }
-
-/* .image-modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: none;
-  align-items: center;
-  justify-content: center;
-  z-index: 1;
-}
-
-.image-modal_opened {
-  display: flex;
-} */
-
 .image-modal__image-container {
   margin: 0;
   position: absolute;
@@ -105,10 +87,3 @@
   opacity: 100%;
   cursor: pointer;
 }
-/* 
-.image-modal__button-close_positioned {
-  position: absolute;
-  top: 0%;
-  right: -52.57px;
-  opacity: 100%;
-} */

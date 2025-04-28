@@ -46,11 +46,3 @@ function ItemModal({ isOpen, onClose, name, weather, link }) {
   );
 }
 export default ItemModal;
-
-{
-  /* <section
-id="clickedPicture"
-className={`modal ${isOpen ? "modal_opened" : ""}`}
-<section id="clickedPicture" className="modal modal_opened">
-> */
-}
