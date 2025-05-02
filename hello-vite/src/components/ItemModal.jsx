@@ -14,12 +14,13 @@ function ItemModal({ isOpen, onClose, name, weather, link }) {
         onClose();
       }
     };
+
     document.addEventListener("keydown", handleEscClose);
 
     return () => {
       document.removeEventListener("keydown", handleEscClose);
     };
-  }, [onClose]);
+  }, [onClose, isOpen]);
   return (
     <section
       id="clickedPicture"

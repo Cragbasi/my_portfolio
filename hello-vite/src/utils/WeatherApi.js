@@ -1,4 +1,4 @@
-export class weatherApi {
+export class WeatherApi {
   constructor(options) {
     // constructor body
 
