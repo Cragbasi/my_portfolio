@@ -1,6 +1,6 @@
-import React, { useState, useContext } from "react";
-import { useNavigate } from "react-router-dom";
-import { Outlet, Link } from "react-router-dom";
+import React, { useContext } from "react";
+
+import { Link } from "react-router-dom";
 import { CurrentTemperatureUnitContext } from "../contexts/CurrentTemperatureUnitContext.jsx";
 import Logo from "../assets/Logo.svg";
 import Avatar from "../assets/Avatar.svg";
@@ -8,7 +8,6 @@ import ToggleSwitch from "./ToggleSwitch.jsx";
 import "../blocks/Header.css";
 
 function Header({ weatherData, onOpenModal }) {
-  const navigate = useNavigate();
   const currentDate = new Date().toLocaleString("default", {
     month: "long",
     day: "numeric",
@@ -21,12 +20,9 @@ function Header({ weatherData, onOpenModal }) {
   return (
     <div className="header">
       <div className="header__container ">
-        <img
-          className="header__logo"
-          src={Logo}
-          alt="Header logo"
-          onClick={() => navigate("/")}
-        ></img>
+        <Link to="/">
+          <img className="header__logo" src={Logo} alt="Header logo" />
+        </Link>
         <p className="header__date-and-location ">
           {/* Render date and location */}
           {currentDate}, {weatherData?.city}
@@ -44,19 +40,16 @@ function Header({ weatherData, onOpenModal }) {
         >
           + Add clothes
         </button>
-        <p
-          className="header__profile-name"
-          onClick={() => navigate("/profile")}
-        >
-          {" "}
-          Terrence Tegegne{" "}
-        </p>
-        <img
-          className="header__avatar"
-          src={Avatar}
-          alt="Header avatar"
-          onClick={() => navigate("/profile")}
-        ></img>
+        <Link to="/profile">
+          <p className="header__profile-name"> Terrence Tegegne </p>
+        </Link>
+        <Link to="/profile">
+          <img
+            className="header__avatar"
+            src={Avatar}
+            alt="Header avatar"
+          ></img>
+        </Link>
       </div>
     </div>
   );
