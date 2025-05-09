@@ -22,7 +22,7 @@
   }
 }
 
-.modal_type_create-item-form {
+.modal_type_new-garment {
   visibility: visible;
   opacity: 1;
   transition: opacity 1s ease-out;

@@ -17,7 +17,9 @@
   padding: 0 20px 0 0;
   width: 89px;
   height: 40px;
+  cursor: pointer;
 }
+
 .header__date-and-location {
   margin: 0;
   padding: 0;
@@ -26,6 +28,7 @@
   padding: 0 0 0 12px;
   width: 40px;
   height: 40px;
+  cursor: pointer;
 }
 .header__container {
   display: flex;
@@ -41,6 +44,7 @@
   display: flex;
   flex-direction: row;
   line-height: 100%;
+  cursor: pointer;
 }
 .header__add-clothes-button {
   font-family: "CabinetGrotesk", sans-serif;

@@ -1,7 +1,7 @@
 import "../blocks/ItemModal.css";
 import closeImage from "../assets/closeImage.svg";
 import { useEffect } from "react";
-function ItemModal({ isOpen, onClose, name, weather, link }) {
+function ItemModal({ isOpen, onClose, name, weather, link, handleDelete }) {
   const handleOverlayClick = (e) => {
     if (e.target === e.currentTarget) {
       onClose();
@@ -27,11 +27,25 @@ function ItemModal({ isOpen, onClose, name, weather, link }) {
       className={`image-modal ${isOpen ? "image-modal_opened" : ""}`}
       onClick={handleOverlayClick}
     >
-      <div className="image-modal__image-container">
-        <img className="image-modal__image" src={link} alt={link} />
-        <div className="image-modal__image-title-container">
-          <h2 className="image-modal__image-title">{name}</h2>
-          <h2 className="image-modal__image-title">Weather: {weather}</h2>
+      <div className="image-modal__container">
+        <img
+          className="image-modal__image"
+          src={link}
+          alt={`Photo of ${name}`}
+        />
+        <div className="image-modal__footer">
+          <div className="image-modal__title-container">
+            <h2 className="image-modal__title">{name}</h2>
+            <h2 className="image-modal__title">Weather: {weather}</h2>
+          </div>
+          <button
+            type="button"
+            id="deleteImageButton"
+            className="image-modal__delete-button"
+            onClick={handleDelete}
+          >
+            Delete item
+          </button>
         </div>
         <button
           type="button"

@@ -1,8 +1,13 @@
+import { useContext } from "react";
+import { CurrentTemperatureUnitContext } from "../contexts/CurrentTemperatureUnitContext.jsx";
 import "../blocks/WeatherCard.css";
 import weatherCard from "../assets/WeatherCard.svg";
 
 function WeatherCard({ weatherData }) {
-  // If no weather data yet, don't try to filter
+  const { currentTemperatureUnit, tempUnitConversion } = useContext(
+    CurrentTemperatureUnitContext
+  );
+
   return (
     <div className="weather-card ">
       <img
@@ -12,7 +17,10 @@ function WeatherCard({ weatherData }) {
       ></img>
       <p className="weather-card__temperature">
         {" "}
-        {weatherData?.temperature}°F{" "}
+        {currentTemperatureUnit === "F"
+          ? tempUnitConversion.F.temperature(weatherData?.temperature)
+          : tempUnitConversion.C.temperature(weatherData?.temperature)}
+        °{currentTemperatureUnit}{" "}
       </p>
     </div>
   );

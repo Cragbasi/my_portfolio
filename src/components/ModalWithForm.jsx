@@ -2,7 +2,15 @@ import "../blocks/ModalWithForm.css";
 
 import close from "../assets/close.svg";
 import { useEffect } from "react";
-function ModalWithForm({ title, name, buttonText, onClose, isOpen, children }) {
+function ModalWithForm({
+  title,
+  name,
+  buttonText,
+  onClose,
+  isOpen,
+  children,
+  onSubmit,
+}) {
   const handleOverlayClick = (e) => {
     if (e.target === e.currentTarget) {
       onClose();
@@ -34,7 +42,7 @@ function ModalWithForm({ title, name, buttonText, onClose, isOpen, children }) {
         <button type="button" className="modal__button-close" onClick={onClose}>
           <img src={close} alt="Close button" />
         </button>
-        <form name={name} id={name} className="modal__form">
+        <form onSubmit={onSubmit} name={name} id={name} className="modal__form">
           {children}
           <button
             type="submit"

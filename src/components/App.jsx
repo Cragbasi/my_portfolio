@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
+import { Routes, Route } from "react-router-dom";
+import { CurrentTemperatureUnitProvider } from "../contexts/CurrentTemperatureUnitContext.jsx";
 import "../blocks/App.css";
 import { WeatherApi } from "../utils/WeatherApi.js";
+import { ApiForClothingItems } from "../utils/api.js";
 import {
   coordinate,
   APIkey,
@@ -10,9 +13,44 @@ import Header from "./Header";
 import Main from "./Main";
 import Footer from "./Footer";
 import ItemModal from "./ItemModal.jsx";
-import ModalWithForm from "./ModalWithForm.jsx";
+
+import Profile from "./Profile.jsx";
+import AddItemModal from "./AddItemModal.jsx";
 
 function App() {
+  const apiClothingItems = new ApiForClothingItems({
+    baseUrl: "http://localhost:3006/items",
+  });
+  const [clothingItems, setClothingItems] = useState(defaultClothingItems);
+  const handleAddItem = (item) => {
+    apiClothingItems
+      .postItem(item.name, item.weather, item.link)
+      .then((res) => {
+        console.log("New item:", res);
+        // Add the new item at the beginning of the array
+        setClothingItems((prevItems) => [res, ...prevItems]);
+      })
+      .catch((err) => {
+        console.error("API error:", err);
+      });
+    handleCloseAddingModal();
+  };
+
+  const handleDeleteItem = (id) => {
+    apiClothingItems
+      .deleteItem(id)
+      .then((res) => {
+        // Add the new item at the beginning of the array
+        setClothingItems((prevItems) =>
+          prevItems.filter((item) => item._id !== id)
+        );
+        handleItemModalClose();
+      })
+      .catch((err) => {
+        console.error("API error:", err);
+      });
+  };
+
   const [weatherData, setWeatherData] = useState(null);
   const [isAddModalOpen, setisAddModalOpen] = useState(false);
 
@@ -26,24 +64,33 @@ function App() {
 
   const [isItemModalOpen, setIsItemModalOpen] = useState(false);
   const [selectedItem, setSelectedItem] = useState(null);
-  const handleItemModalOpen = (name, weather, link) => {
-    console.log("Modal opening with:", name, weather);
+  const handleItemModalOpen = (id, name, weather, link) => {
+    console.log("Modal opening with:", id, name, weather);
     setIsItemModalOpen(true);
-    setSelectedItem({ name, weather, link });
+    setSelectedItem({ id, name, weather, link });
   };
 
   const handleItemModalClose = () => {
     setIsItemModalOpen(false);
   };
   useEffect(() => {
-    const api = new WeatherApi({
+    const apiForWeather = new WeatherApi({
       baseUrl: `https://api.openweathermap.org/data/2.5/weather?lat=${coordinate.latitude}&lon=${coordinate.longitude}&units=imperial&appid=${APIkey}`,
     });
 
-    api
+    apiForWeather
       .getInfo()
       .then((res) => {
         setWeatherData(res);
+      })
+      .catch((err) => {
+        console.error("API error:", err);
+      });
+
+    apiClothingItems
+      .getItems()
+      .then((res) => {
+        setClothingItems(res);
       })
       .catch((err) => {
         console.error("API error:", err);
@@ -52,12 +99,32 @@ function App() {
 
   return (
     <div className="page">
-      <Header weatherData={weatherData} onOpenModal={handleOpenAddingModal} />
-      <Main
-        weatherData={weatherData}
-        defaultClothingItems={defaultClothingItems}
-        onCardClick={handleItemModalOpen}
-      />
+      <CurrentTemperatureUnitProvider>
+        <Header weatherData={weatherData} onOpenModal={handleOpenAddingModal} />
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <Main
+                weatherData={weatherData}
+                defaultClothingItems={clothingItems}
+                onCardClick={handleItemModalOpen}
+              />
+            }
+          />
+          <Route
+            path="/profile"
+            element={
+              <Profile
+                onOpenModal={handleOpenAddingModal}
+                weatherData={weatherData}
+                defaultClothingItems={clothingItems}
+                onCardClick={handleItemModalOpen}
+              />
+            }
+          />
+        </Routes>
+      </CurrentTemperatureUnitProvider>
       <Footer />
       <ItemModal
         isOpen={isItemModalOpen}
@@ -65,82 +132,15 @@ function App() {
         name={selectedItem?.name}
         weather={selectedItem?.weather}
         link={selectedItem?.link}
-        onOpenModal={handleItemModalOpen}
+        handleDelete={() => handleDeleteItem(selectedItem?.id)}
       />
+
       {isAddModalOpen && (
-        <ModalWithForm
-          title="New garment"
-          name="create-item-form"
-          buttonText="Add garment"
+        <AddItemModal
           onClose={handleCloseAddingModal}
           isOpen={isAddModalOpen}
-        >
-          <label htmlFor="caption" className="modal__input-label">
-            {" "}
-            Name{" "}
-          </label>
-          <input
-            type="text"
-            id="caption"
-            className="modal__input"
-            placeholder="Name"
-            required
-            minLength="2"
-            maxLength="30"
-          />
-          <label htmlFor="picture" className="modal__input-label">
-            Image
-          </label>
-          <input
-            id="picture"
-            className="modal__input"
-            placeholder="Image URL"
-            required
-            type="url"
-          />{" "}
-          <fieldset className="modal__fieldset">
-            <h2 className="modal__fieldset-title">Select the weather type:</h2>
-            <div className="modal__radio-botton-container">
-              <input
-                className="modal__input-radio"
-                type="radio"
-                id="hot"
-                name="weather"
-                value="hot"
-              />
-
-              <label htmlFor="hot" className="modal__input-radio-label">
-                Hot
-              </label>
-            </div>
-
-            <div className="modal__radio-botton-container">
-              <input
-                className="modal__input-radio"
-                type="radio"
-                id="warm"
-                name="weather"
-                value="warm"
-              />
-
-              <label htmlFor="warm" className="modal__input-radio-label">
-                Warm
-              </label>
-            </div>
-            <div className="modal__radio-botton-container">
-              <input
-                className="modal__input-radio"
-                type="radio"
-                id="cold"
-                name="weather"
-                value="cold"
-              />
-              <label htmlFor="cold" className="modal__input-radio-label">
-                Cold
-              </label>
-            </div>
-          </fieldset>
-        </ModalWithForm>
+          onAddItem={handleAddItem}
+        ></AddItemModal>
       )}
     </div>
   );
