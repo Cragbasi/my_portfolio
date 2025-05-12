@@ -5,7 +5,6 @@ function ItemCard({ item, onCardClick }) {
 
   return (
     <li
-      key={item._id}
       className="item-card"
       onClick={() => onCardClick(item._id, item.name, item.weather, item.link)}
     >

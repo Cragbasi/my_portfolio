@@ -19,7 +19,7 @@ import AddItemModal from "./AddItemModal.jsx";
 
 function App() {
   const apiClothingItems = new ApiForClothingItems({
-    baseUrl: "http://localhost:3006/items",
+    baseUrl: "http://localhost:3001/items",
   });
   const [clothingItems, setClothingItems] = useState(defaultClothingItems);
   const handleAddItem = (item) => {
@@ -27,24 +27,24 @@ function App() {
       .postItem(item.name, item.weather, item.link)
       .then((res) => {
         console.log("New item:", res);
+        handleCloseAddingModal();
         // Add the new item at the beginning of the array
         setClothingItems((prevItems) => [res, ...prevItems]);
       })
       .catch((err) => {
         console.error("API error:", err);
       });
-    handleCloseAddingModal();
   };
 
   const handleDeleteItem = (id) => {
     apiClothingItems
       .deleteItem(id)
       .then((res) => {
+        handleItemModalClose();
         // Add the new item at the beginning of the array
         setClothingItems((prevItems) =>
           prevItems.filter((item) => item._id !== id)
         );
-        handleItemModalClose();
       })
       .catch((err) => {
         console.error("API error:", err);

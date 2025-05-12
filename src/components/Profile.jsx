@@ -11,11 +11,6 @@ function Profile({
     return <div>Loading...</div>;
   }
 
-  // Filter clothing items based on current weather
-  const filteredClothes = defaultClothingItems.filter((item) => {
-    return item.weather.toLowerCase() === weatherData.weatherType.toLowerCase();
-  });
-
   return (
     <div className="profile">
       <SideBar />

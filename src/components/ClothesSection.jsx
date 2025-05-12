@@ -11,11 +11,6 @@ function ClothesSection({
     return <div>Loading...</div>;
   }
 
-  // Filter clothing items based on current weather
-  const filteredClothes = defaultClothingItems.filter((item) => {
-    return item.weather.toLowerCase() === weatherData.weatherType.toLowerCase();
-  });
-
   return (
     <div className="cards">
       <div className="cards__title-container ">
@@ -29,8 +24,8 @@ function ClothesSection({
         </button>
       </div>
       <ul className="cards__container">
-        {/* Map Filtered clothing items to DOM*/}
-        {filteredClothes.map((item) => (
+        {/* Map clothing items to DOM*/}
+        {defaultClothingItems.map((item) => (
           <ItemCard
             key={item._id}
             item={item}

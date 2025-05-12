@@ -46,7 +46,6 @@ function ModalWithForm({
           {children}
           <button
             type="submit"
-            id="saveNewPostButton"
             className="modal__button-save modal__button-save_disabled"
             // disabled
           >

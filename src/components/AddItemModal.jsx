@@ -37,7 +37,6 @@ const AddItemModal = ({ isOpen, onAddItem, onClose }) => {
 
     const submittedData = { name, link, weather };
     onAddItem(submittedData);
-    onClose();
   }
 
   return (
