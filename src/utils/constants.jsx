@@ -1,3 +1,9 @@
+import vers from "../assets/portfolio/vers.png";
+import smc from "../assets/portfolio/smc.jpg";
+import cummins2 from "../assets/portfolio/cummins2.jpg";
+import RBC from "../assets/portfolio/RBC.jpeg";
+import RBC2 from "../assets/portfolio/RBC2.jpeg";
+import rock from "../assets/portfolio/rock.webp";
 export const mechanical = [
   {
     imageURL: vers,
@@ -27,10 +33,10 @@ export const mechanical = [
     deployedURL: "smc.com",
   },
   {
-    imageURL: cummins,
+    imageURL: rock,
     title: "Senior Applied Mechanics Engineer & Technical Lead at Cummins Inc.",
     description:
-      "Led a cross-functional team in diagnosing and resolving historic engine component failures through rigorous Failure Mode and Effects Analysis (FMEA). Spearheaded the redesign of a 60" × 34" engine guard, incorporating optimized sheet metal, rail, and bracket assemblies, achieving a 98% reduction in failure rate. ",
+      "Led a cross-functional team in diagnosing and resolving historic engine component failures through rigorous Failure Mode and Effects Analysis (FMEA). Spearheaded the redesign of a 60 in × 34 in engine guard, incorporating optimized sheet metal, rail, and bracket assemblies, achieving a 98% reduction in failure rate. ",
     techStack: [
       "Creo Parametric",
       "3Sheet Metal Design",
@@ -42,16 +48,17 @@ export const mechanical = [
       "Six Sigma",
       "Root Cause Analysis (RCA)",
     ],
-    demoURL: "https://s1partscenter.com/brands/cummins/shield/3098957?absrc=Bing&abid=76828576932467&abcampid=486310712&bclid=443e0c981ed11db8fc4364058027a9d4&campaignid=486310712&adgroupid=1229255086520100&keyword=&device=c&msclkid=443e0c981ed11db8fc4364058027a9d4",
-    deployedURL: "https://s1partscenter.com/brands/cummins/shield/3003152?absrc=Bing&abid=76828576932467&abcampid=486310712&bclid=ea53746ccad21b9c4df61cf15743f84e&campaignid=486310712&adgroupid=1229255086520100&keyword=&device=c&msclkid=ea53746ccad21b9c4df61cf15743f84e",
+    demoURL:
+      "https://s1partscenter.com/brands/cummins/shield/3098957?absrc=Bing&abid=76828576932467&abcampid=486310712&bclid=443e0c981ed11db8fc4364058027a9d4&campaignid=486310712&adgroupid=1229255086520100&keyword=&device=c&msclkid=443e0c981ed11db8fc4364058027a9d4",
+    deployedURL:
+      "https://s1partscenter.com/brands/cummins/shield/3003152?absrc=Bing&abid=76828576932467&abcampid=486310712&bclid=ea53746ccad21b9c4df61cf15743f84e&campaignid=486310712&adgroupid=1229255086520100&keyword=&device=c&msclkid=ea53746ccad21b9c4df61cf15743f84e",
   },
-    {
-    imageURL: cummins,
+  {
+    imageURL: cummins2,
     title: "Applied Mechanics Engineer at Cummins Inc.",
     description:
       "Validated 100+ engine components (crankshaft, turbo-compressor, piston, cylinder head, flywheel, connecting rod, rocker, etc.), including thermal systems, using best practices. Designed test fixtures in CREO, led static/fatigue/vibration testing, and drove upgrades via data analysis. Authored technical docs to support design and reliability improvements. ",
     techStack: [
-    
       "Finite Element Analysis (FEA)",
       "Creo Parametric",
       "Sheet Metal Design",
@@ -60,58 +67,56 @@ export const mechanical = [
       "Vibration, Fatigue, and Thermal Analysis",
       "Digital Image Correlation (DIC)",
       "Vibration, Fatigue, and Thermal Testing",
-        "LMS SCADAS",
+      "LMS SCADAS",
       "LMS Test.Lab",
       "Six Sigma",
       "Root Cause Analysis (RCA)",
       "Shaker Table Testing",
       "Test Fixture Design",
       "Technical Documentation",
-      
     ],
-    demoURL: "https://www.cummins.com/news/releases/2023/02/13/cummins-announces-new-x10-engine-next-fuel-agnostic-series-launching-north",
-      deployedURL: "Cummins.com"  },
-       {
+    demoURL:
+      "https://www.cummins.com/news/releases/2023/02/13/cummins-announces-new-x10-engine-next-fuel-agnostic-series-launching-north",
+    deployedURL: "Cummins.com",
+  },
+  {
     imageURL: RBC,
     title: "Mechanical Design Engineer of Bearing Validation Systems",
     description:
       "Design & Quality Inspection Engineer – Bearing Validation Systems: Developed and installed a quality-inspection rotating equipment for RBC bearing validation using current transduction and torque sensing. Networked devices to capture torque measurements, process data, and display key performance indicators. Implemented cost-saving measures, reducing expenses by over $150,000.",
     techStack: [
-    
       "ELectrical Design",
       "Test Equipment Design",
       "Sheet Metal Design",
       "DFMEA",
       "Torqe Measurement",
-        "Mechanical Design",
-        "Concept Generation"
+      "Mechanical Design",
+      "Concept Generation",
       "Six Sigma",
       "Test Fixture Design",
       "Technical Documentation",
-      
     ],
     demoURL: "",
-      deployedURL: ""  ,
-    },
-           {
-    imageURL: RBC 2,
+    deployedURL: "",
+  },
+  {
+    imageURL: RBC2,
     title: "Electrical Design Engineer of Bearing Validation Systems",
     description:
       "When cam-followers are put under loading, they undergo tensile and compressive forces. To meet quality specifications, the bearing of the cam-follower must turn smoothly under loading. My team's task was to design an automated device that accomplished the full rotation test of the cam follower for quality inspection. We were requested to quantify the torque it took to rotate each cam-follower. We successfully accomplished the project and saved RBC bearings over $150,000.",
     techStack: [
-    
       "ELectrical Design",
       "Test Equipment Design",
       "DFMEA",
       "Torqe Measurement",
-        "Concept Generation"
+      "Concept Generation",
       "Six Sigma",
       "Test Fixture Design",
       "Technical Documentation",
-      
     ],
     demoURL: "",
-      deployedURL: ""  },
+    deployedURL: "",
+  },
 ];
 
 import news from "../assets/portfolio/news-explorer.png";
@@ -291,5 +296,21 @@ export const slides = [
         software—where innovation is both tangible and digital."
       </>
     ),
+  },
+];
+export const AboutConfahmSlides = [
+  {
+    imageURL: confahmLogo,
+    title: "A Mechanical and Software Engineering Service Company",
+    description:
+      "Confahm is a dynamic brand, founded by mechanical and software engineer Chijioke Agbasi, dedicated to delivering authentic, high-quality products and innovative engineering services. Our mission is to empower individuals and businesses with reliable solutions that prioritize integrity and excellence, ensuring every offering meets the highest standards of legitimacy. Join us as we redefine the marketplace with a commitment to quality and community!",
+    techStack: [
+      "Mechanical Engineering",
+      "Software Engineering",
+      "Product Engineering",
+      "Full Stack Development",
+    ],
+    demoURL: "",
+    deployedURL: "https://confahm.com",
   },
 ];

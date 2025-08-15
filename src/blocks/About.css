@@ -1,11 +1,11 @@
 .about {
-  height: 624px;
+  /* height: 624px; */
   max-width: 100%;
   display: flex;
   flex-direction: row;
   margin: 0 auto;
   background: linear-gradient(
-    90deg,
+    180deg,
     #606264 0%,
     /* 20% darker */ #383838 50%,
     /* base color */ #595959 100% /* 20% lighter */
@@ -14,15 +14,14 @@
 .about__text-container {
   display: flex;
   flex-direction: column;
-  margin: 40px;
+  margin: 80px 40px 40px;
   width: 100%;
 }
 .about__title {
   font-family: "CabinetGrotesk", sans-serif;
-  font-weight: 400;
   font-size: 40px;
   color: white;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 .about__description {
   display: flex;
@@ -37,9 +36,8 @@
 .about__avatar {
   object-fit: cover;
   height: 464px;
-  /* width: 464px; */
+
   border-radius: 5%;
-  /* margin: 80px 0 0 40px; */
 }
 
 .about__slides {
@@ -71,8 +69,8 @@
 .about__slide-selector {
   display: flex;
   justify-content: center;
-  margin-top: 24px;
   gap: 12px;
+  margin: 80px 0 0;
 }
 
 .about__slide-dot {

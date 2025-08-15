@@ -12,8 +12,8 @@ const ToggleSwitch = ({ isChecked, setIsChecked }) => {
 
       <label htmlFor={`react-switch-new`} className="react-switch__label">
         <span className={`react-switch__button`} />
-        <p className="react-switch__checkbox_F ">Mechanical Engineer</p>
-        <p className="react-switch__checkbox_C ">Software Engineer</p>
+        <p className="react-switch__checkbox_M ">Mechanical Engineer</p>
+        <p className="react-switch__checkbox_S ">Software Engineer</p>
       </label>
     </div>
   );

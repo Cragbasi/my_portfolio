@@ -1,7 +1,7 @@
 .react-switch {
   margin: 0 20px 25px 0;
 }
-.react-switch__checkbox_F {
+.react-switch__checkbox_M {
   font-family: "CabinetGrotesk", sans-serif;
   font-weight: 700;
   font-size: 32px;
@@ -11,7 +11,7 @@
   left: 25px;
   color: #ffffff;
 }
-.react-switch__checkbox_C {
+.react-switch__checkbox_S {
   font-family: "CabinetGrotesk", sans-serif;
   font-weight: 700;
   font-size: 32px;
@@ -33,7 +33,7 @@
   justify-content: space-between;
   cursor: pointer;
   width: 700px;
-  height: 100px;
+  height: 60px;
   background: #ffffff;
   border-radius: 100px;
   position: relative;
@@ -47,7 +47,7 @@
   top: -2px;
   left: -2px;
   width: 350px;
-  height: 100px;
+  height: 60px;
   border-radius: 45px;
   transition: 0.2s;
   background: #000000;
@@ -74,12 +74,12 @@
 
 .react-switch__checkbox:checked
   + .react-switch__label
-  .react-switch__checkbox_C {
+  .react-switch__checkbox_S {
   color: #ffffff;
 }
 .react-switch__checkbox:checked
   + .react-switch__label
-  .react-switch__checkbox_F {
+  .react-switch__checkbox_M {
   color: #7e7e7e;
 }
 

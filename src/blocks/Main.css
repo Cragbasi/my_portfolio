@@ -1,21 +1,27 @@
 .main {
-  margin: 0 auto;
+  margin: 0 auto auto;
   width: 100%;
-  padding: 0 40px 28px;
-
+  padding: 80px 40px 28px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  background: linear-gradient(
+    90deg,
+    #606264 0%,
+    /* 20% darker */ #383838 50%,
+    /* base color */ #595959 100% /* 20% lighter */
+  );
 }
 
 .main__title {
   height: 25px;
   align-self: flex-start;
+  color: white;
 }
 .slideshow {
   display: flex;
-  align-items: center;
+  align-items: start;
   justify-content: center;
   gap: 24px;
   margin: 40px 0;
@@ -39,7 +45,9 @@
   background-size: contain;
   background-repeat: none;
   background-position: center;
+  background-color: #fff;
   rotate: 180deg; /* Rotate the left arrow */
+  border-radius: 50%;
 }
 
 .slideshow__arrow_right {
@@ -49,6 +57,8 @@
   background-size: contain;
   background-repeat: none;
   background-position: center;
+  background-color: #fff;
+  border-radius: 50%;
 }
 
 .slideshow__card {
@@ -64,7 +74,7 @@
 
 .slideshow__content {
   flex: 1 1 0;
-  padding: 32px 24px;
+  padding: 32px 0 32px 40px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -72,6 +82,7 @@
 
 .slideshow__title {
   font-size: 2rem;
+  line-height: 1.1;
   margin-bottom: 12px;
 }
 
@@ -115,6 +126,7 @@
   background: #fafafa;
   min-width: 320px;
   max-width: 600px;
+  margin: 40px;
 }
 
 .slideshow__image {

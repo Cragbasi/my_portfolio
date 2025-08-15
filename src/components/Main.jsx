@@ -1,10 +1,15 @@
 import { useState, useEffect } from "react";
-import { mechanical, software } from "../utils/constants.jsx";
-import ItemCard from "./ItemCard.jsx";
+
 import "../blocks/Main.css";
-function Main({ Profession }) {
+
+function Main({ isChecked, slides, title }) {
   const [current, setCurrent] = useState(0);
-  const total = software.length;
+  const total = slides.length;
+
+  useEffect(() => {
+    // Reset to first slide if array changes (isChecked toggled)
+    setCurrent(0);
+  }, [isChecked]);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -16,11 +21,11 @@ function Main({ Profession }) {
   const goPrev = () => setCurrent((prev) => (prev - 1 + total) % total);
   const goNext = () => setCurrent((prev) => (prev + 1) % total);
 
-  const item = software[current];
+  const item = slides[current];
 
   return (
     <div className="main">
-      <h1 className="main__title">{Profession}</h1>
+      <h1 className="main__title"> {title} </h1>
       <div className="slideshow">
         <button
           className="slideshow__arrow slideshow__arrow_left"
@@ -78,4 +83,5 @@ function Main({ Profession }) {
     </div>
   );
 }
+
 export default Main;
