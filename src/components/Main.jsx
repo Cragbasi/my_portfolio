@@ -1,47 +1,80 @@
-import { useContext } from "react";
-import { Routes, Route } from "react-router-dom";
-import { CurrentTemperatureUnitContext } from "../contexts/CurrentTemperatureUnitContext.jsx";
+import { useState, useEffect } from "react";
+import { mechanical, software } from "../utils/constants.jsx";
+import ItemCard from "./ItemCard.jsx";
 import "../blocks/Main.css";
-import WeatherCard from "./WeatherCard";
-import ItemCard from "./ItemCard";
+function Main({ Profession }) {
+  const [current, setCurrent] = useState(0);
+  const total = software.length;
 
-function Main({ weatherData, defaultClothingItems, onCardClick }) {
-  if (!weatherData) {
-    return <div>Loading...</div>;
-  }
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setCurrent((prev) => (prev + 1) % total);
+    }, 30000);
+    return () => clearTimeout(timer);
+  }, [current, total]);
 
-  // Filter clothing items based on current weather
-  const filteredClothes = defaultClothingItems.filter((item) => {
-    return item.weather.toLowerCase() === weatherData.weatherType.toLowerCase();
-  });
+  const goPrev = () => setCurrent((prev) => (prev - 1 + total) % total);
+  const goNext = () => setCurrent((prev) => (prev + 1) % total);
 
-  const { currentTemperatureUnit, tempUnitConversion } = useContext(
-    CurrentTemperatureUnitContext
-  );
+  const item = software[current];
 
   return (
     <div className="main">
-      <WeatherCard weatherData={weatherData} />
-      <h2 className="main__title">
-        {" "}
-        Today is{" "}
-        {currentTemperatureUnit === "F"
-          ? tempUnitConversion.F.temperature(weatherData?.temperature)
-          : tempUnitConversion.C.temperature(weatherData?.temperature)}
-        ° {currentTemperatureUnit} / You may want to wear:
-      </h2>
-      <ul className="item-cards">
-        {/* Map Filtered clothing items to DOM*/}
-        {filteredClothes.map((item) => (
-          <ItemCard
-            key={item._id}
-            item={item}
-            weatherData={weatherData}
-            defaultClothingItems={defaultClothingItems}
-            onCardClick={onCardClick}
-          />
-        ))}
-      </ul>
+      <h1 className="main__title">{Profession}</h1>
+      <div className="slideshow">
+        <button
+          className="slideshow__arrow slideshow__arrow_left"
+          onClick={goPrev}
+          aria-label="Previous"
+        />
+        <div className="slideshow__card">
+          <div className="slideshow__content">
+            <h2 className="slideshow__title">{item.title}</h2>
+            <p className="slideshow__description">{item.description}</p>
+            <ul className="slideshow__techstack">
+              {item.techStack.map((tech, idx) => (
+                <li key={idx} className="slideshow__tech">
+                  {tech}
+                </li>
+              ))}
+            </ul>
+            <div className="slideshow__links">
+              {item.demoURL && (
+                <a
+                  href={item.demoURL}
+                  className="slideshow__link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Demo
+                </a>
+              )}
+              {item.deployedURL && (
+                <a
+                  href={item.deployedURL}
+                  className="slideshow__link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Live Site
+                </a>
+              )}
+            </div>
+          </div>
+          <div className="slideshow__image-container">
+            <img
+              className="slideshow__image"
+              src={item.imageURL}
+              alt={item.title}
+            />
+          </div>
+        </div>
+        <button
+          className="slideshow__arrow slideshow__arrow_right"
+          onClick={goNext}
+          aria-label="Next"
+        />
+      </div>
     </div>
   );
 }

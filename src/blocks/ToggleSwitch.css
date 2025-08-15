@@ -2,15 +2,23 @@
   margin: 0 20px 25px 0;
 }
 .react-switch__checkbox_F {
+  font-family: "CabinetGrotesk", sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 32px;
   position: relative;
   top: 0px;
-  left: 7px;
+  left: 25px;
   color: #ffffff;
 }
 .react-switch__checkbox_C {
+  font-family: "CabinetGrotesk", sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 32px;
   position: relative;
   top: 0px;
-  left: -7px;
+  left: -30px;
   color: #7e7e7e;
 }
 .react-switch__checkbox {
@@ -24,8 +32,8 @@
   align-items: center;
   justify-content: space-between;
   cursor: pointer;
-  width: 56px;
-  height: 28px;
+  width: 700px;
+  height: 100px;
   background: #ffffff;
   border-radius: 100px;
   position: relative;
@@ -38,8 +46,8 @@
   position: absolute;
   top: -2px;
   left: -2px;
-  width: 32px;
-  height: 32px;
+  width: 350px;
+  height: 100px;
   border-radius: 45px;
   transition: 0.2s;
   background: #000000;
@@ -51,9 +59,14 @@
 }
 
 .react-switch__label:hover .react-switch__button {
-  left: 0.2px;
+  left: 10px;
 }
-
+.react-switch__checkbox:checked
+  + .react-switch__label:hover
+  .react-switch__button {
+  left: calc(100% - 12px); /* nudge left when checked and hovered */
+  transform: translateX(-100%);
+}
 .react-switch__checkbox:checked + .react-switch__label .react-switch__button {
   left: calc(100% + 2px);
   transform: translateX(-100%);
@@ -71,5 +84,5 @@
 }
 
 .react-switch__label:active .react-switch__button {
-  width: 40px;
+  width: 350px;
 }

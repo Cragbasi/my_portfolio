@@ -1,6 +1,6 @@
 .main {
-  margin: 0;
-  width: 1360px;
+  margin: 0 auto;
+  width: 100%;
   padding: 0 40px 28px;
 
   display: flex;
@@ -13,13 +13,112 @@
   height: 25px;
   align-self: flex-start;
 }
-.item-cards {
-  max-width: 1280px;
-  padding: 34px 0;
-  display: grid;
-  grid-template-columns: repeat(4, 328px);
-  gap: 20px 20px;
-  justify-content: center;
+.slideshow {
+  display: flex;
   align-items: center;
-  list-style-type: none;
+  justify-content: center;
+  gap: 24px;
+  margin: 40px 0;
+}
+
+.slideshow__arrow {
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  /* background-image: url("../assets/arrowL.svg"); */
+  /* Insert your arrow background-image here if needed */
+}
+
+.slideshow__arrow_left {
+  width: 40px;
+  height: 40px;
+  background-image: url("../assets/arrowL.svg");
+  background-size: contain;
+  background-repeat: none;
+  background-position: center;
+  rotate: 180deg; /* Rotate the left arrow */
+}
+
+.slideshow__arrow_right {
+  width: 40px;
+  height: 40px;
+  background-image: url("../assets/arrowL.svg");
+  background-size: contain;
+  background-repeat: none;
+  background-position: center;
+}
+
+.slideshow__card {
+  display: flex;
+  align-items: stretch;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  min-width: 700px;
+  max-width: 1200px;
+}
+
+.slideshow__content {
+  flex: 1 1 0;
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.slideshow__title {
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+
+.slideshow__description {
+  font-size: 25px;
+  font-weight: 400;
+  margin-bottom: 16px;
+}
+
+.slideshow__techstack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+  list-style: none;
+  padding: 0;
+}
+
+.slideshow__tech {
+  background: #f0f0f0;
+  border-radius: 8px;
+  padding: 4px 10px;
+  font-size: 0.95rem;
+}
+
+.slideshow__links {
+  display: flex;
+  gap: 16px;
+}
+
+.slideshow__link {
+  color: #1976d2;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.slideshow__image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fafafa;
+  min-width: 320px;
+  max-width: 600px;
+}
+
+.slideshow__image {
+  max-width: 100%;
+  max-height: 320px;
+  object-fit: contain;
 }

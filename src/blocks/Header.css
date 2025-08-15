@@ -3,59 +3,50 @@
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
-  padding: 32px 40px 28px;
-  width: 1360px;
-  height: 40px;
-
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.header__logo {
-  padding: 0 20px 0 0;
-  width: 89px;
-  height: 40px;
-  cursor: pointer;
-}
-
-.header__date-and-location {
-  margin: 0;
-  padding: 0;
-}
-.header__avatar {
-  padding: 0 0 0 12px;
-  width: 40px;
-  height: 40px;
-  cursor: pointer;
+  padding: 0 40px;
+  width: 100%;
+  /* background-color: #000000; */
 }
 .header__container {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+
   align-items: center;
-  justify-content: center;
 }
-.header__left-container {
-  display: flex;
-  flex-direction: row;
-}
-.header__profile-name {
-  display: flex;
-  flex-direction: row;
-  line-height: 100%;
+.header__logo {
+  background-image: url(../assets/ConfahmLogo2.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-top: 10px;
+  width: 200px;
+  height: 100px;
   cursor: pointer;
 }
-.header__add-clothes-button {
-  font-family: "CabinetGrotesk", sans-serif;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 24px;
-  margin: 0 20px 0 0;
+
+.header__nav-bar {
   display: flex;
   flex-direction: row;
-  font-size: 20px;
-  line-height: 24px;
-  background-color: transparent;
-  border: none;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+.header__home-button {
+  font-family: "CabinetGrotesk", sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  width: 200px;
+  height: 100px;
+  background: #ffffff;
+  border-radius: 100px;
+  transition: background-color 0.2s;
+  border: 2px solid #7e7e7e;
+}
+.header__home-button:hover {
+  border: 2px solid #000000;
 }

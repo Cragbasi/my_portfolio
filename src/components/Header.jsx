@@ -1,65 +1,27 @@
-import React, { useContext } from "react";
-
 import { Link } from "react-router-dom";
-import { CurrentTemperatureUnitContext } from "../contexts/CurrentTemperatureUnitContext.jsx";
-import Logo from "../assets/Logo.svg";
-import Avatar from "../assets/Avatar.svg";
-import ToggleSwitch from "./ToggleSwitch.jsx";
+
 import "../blocks/Header.css";
-
-function Header({ weatherData, onOpenModal }) {
-  const currentDate = new Date().toLocaleString("default", {
-    month: "long",
-    day: "numeric",
-  });
-
-  const { currentTemperatureUnit, handleToggleSwitch } = useContext(
-    CurrentTemperatureUnitContext
-  );
-
+import ToggleSwitch from "./ToggleSwitch.jsx";
+function Header({ isChecked, setIsChecked }) {
   return (
     <div className="header">
       <div className="header__container ">
         <Link to="/">
-          <img className="header__logo" src={Logo} alt="Header logo" />
+          <div className="header__logo" alt="Header logo"></div>
         </Link>
-        <p className="header__date-and-location ">
-          {/* Render date and location */}
-          {currentDate}, {weatherData?.city}
-        </p>
-      </div>
-      <div className="header__container ">
-        <ToggleSwitch
-          onChange={handleToggleSwitch}
-          isChecked={currentTemperatureUnit === "C"}
-        />
-        <button
-          type="button"
-          className="header__add-clothes-button"
-          onClick={onOpenModal}
-        >
-          + Add clothes
-        </button>
-        <Link to="/profile">
-          <p className="header__profile-name"> Terrence Tegegne </p>
-        </Link>
-        <Link to="/profile">
-          <img
-            className="header__avatar"
-            src={Avatar}
-            alt="Header avatar"
-          ></img>
-        </Link>
+
+        <nav className="header__nav-bar ">
+          <Link to="/">
+            <button className="header__home-button"> Home</button>
+          </Link>
+          <ToggleSwitch
+            isChecked={isChecked}
+            setIsChecked={setIsChecked}
+          ></ToggleSwitch>
+        </nav>
       </div>
     </div>
   );
 }
-
-// ReactDOM.render(
-//   <>
-//     <Header />
-//   </>,
-//   document.querySelector("#root")
-// );
 
 export default Header;

@@ -1,147 +1,27 @@
 import React, { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
-import { CurrentTemperatureUnitProvider } from "../contexts/CurrentTemperatureUnitContext.jsx";
 import "../blocks/App.css";
-import { WeatherApi } from "../utils/WeatherApi.js";
-import { ApiForClothingItems } from "../utils/api.js";
-import {
-  coordinate,
-  APIkey,
-  defaultClothingItems,
-} from "../utils/constants.js";
+import { mechanical, software } from "../utils/constants.jsx";
 import Header from "./Header";
-import Main from "./Main";
-import Footer from "./Footer";
-import ItemModal from "./ItemModal.jsx";
+import Main from "./Main.jsx";
+import About from "./About.jsx";
 
-import Profile from "./Profile.jsx";
-import AddItemModal from "./AddItemModal.jsx";
+import Footer from "./Footer";
 
 function App() {
-  const apiClothingItems = new ApiForClothingItems({
-    baseUrl: "http://localhost:3001/items",
-  });
-  const [clothingItems, setClothingItems] = useState(defaultClothingItems);
-  const handleAddItem = (item) => {
-    apiClothingItems
-      .postItem(item.name, item.weather, item.link)
-      .then((res) => {
-        console.log("New item:", res);
-        handleCloseAddingModal();
-        // Add the new item at the beginning of the array
-        setClothingItems((prevItems) => [res, ...prevItems]);
-      })
-      .catch((err) => {
-        console.error("API error:", err);
-      });
-  };
-
-  const handleDeleteItem = (id) => {
-    apiClothingItems
-      .deleteItem(id)
-      .then((res) => {
-        handleItemModalClose();
-        // Add the new item at the beginning of the array
-        setClothingItems((prevItems) =>
-          prevItems.filter((item) => item._id !== id)
-        );
-      })
-      .catch((err) => {
-        console.error("API error:", err);
-      });
-  };
-
-  const [weatherData, setWeatherData] = useState(null);
-  const [isAddModalOpen, setisAddModalOpen] = useState(false);
-
-  const handleOpenAddingModal = () => {
-    setisAddModalOpen(true);
-  };
-
-  const handleCloseAddingModal = () => {
-    setisAddModalOpen(false);
-  };
-
-  const [isItemModalOpen, setIsItemModalOpen] = useState(false);
-  const [selectedItem, setSelectedItem] = useState(null);
-  const handleItemModalOpen = (id, name, weather, link) => {
-    console.log("Modal opening with:", id, name, weather);
-    setIsItemModalOpen(true);
-    setSelectedItem({ id, name, weather, link });
-  };
-
-  const handleItemModalClose = () => {
-    setIsItemModalOpen(false);
-  };
-  useEffect(() => {
-    const apiForWeather = new WeatherApi({
-      baseUrl: `https://api.openweathermap.org/data/2.5/weather?lat=${coordinate.latitude}&lon=${coordinate.longitude}&units=imperial&appid=${APIkey}`,
-    });
-
-    apiForWeather
-      .getInfo()
-      .then((res) => {
-        setWeatherData(res);
-      })
-      .catch((err) => {
-        console.error("API error:", err);
-      });
-
-    apiClothingItems
-      .getItems()
-      .then((res) => {
-        setClothingItems(res);
-      })
-      .catch((err) => {
-        console.error("API error:", err);
-      });
-  }, []);
+  const [isChecked, setIsChecked] = useState(false);
 
   return (
     <div className="page">
-      <CurrentTemperatureUnitProvider>
-        <Header weatherData={weatherData} onOpenModal={handleOpenAddingModal} />
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <Main
-                weatherData={weatherData}
-                defaultClothingItems={clothingItems}
-                onCardClick={handleItemModalOpen}
-              />
-            }
-          />
-          <Route
-            path="/profile"
-            element={
-              <Profile
-                onOpenModal={handleOpenAddingModal}
-                weatherData={weatherData}
-                defaultClothingItems={clothingItems}
-                onCardClick={handleItemModalOpen}
-              />
-            }
-          />
-        </Routes>
-      </CurrentTemperatureUnitProvider>
-      <Footer />
-      <ItemModal
-        isOpen={isItemModalOpen}
-        onClose={handleItemModalClose}
-        name={selectedItem?.name}
-        weather={selectedItem?.weather}
-        link={selectedItem?.link}
-        handleDelete={() => handleDeleteItem(selectedItem?.id)}
-      />
+      <Header isChecked={isChecked} setIsChecked={setIsChecked} />
+      <Routes>
+        <Route path="/" element={<About />} />
 
-      {isAddModalOpen && (
-        <AddItemModal
-          onClose={handleCloseAddingModal}
-          isOpen={isAddModalOpen}
-          onAddItem={handleAddItem}
-        ></AddItemModal>
-      )}
+        {/* <Route path="/mechanical" element={<Profile />} />
+        <Route path="/software" element={<Profile />} /> */}
+      </Routes>
+      <Main />
+      <Footer />
     </div>
   );
 }
