@@ -10,7 +10,7 @@
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "npx gh-pages -d dist"
   },
   "dependencies": {
     "express": "^4.21.2",
@@ -37,11 +37,11 @@
   "main": "vite.config.js",
   "repository": {
     "type": "git",
-    "url": "git+https://cragbasi.github.io/my_website/"
+    "url": "git+https://github.com/Cragbasi/my_website.git"
   },
   "author": "Chijioke Agbasi",
   "license": "ISC",
   "bugs": {
-    "url": "hhttps://cragbasi.github.io/my_website/issues"
+    "url": "https://github.com/Cragbasi/my_website/issues"
   }
 }
