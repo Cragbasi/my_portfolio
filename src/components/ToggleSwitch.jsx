@@ -1,7 +1,13 @@
 import "../blocks/ToggleSwitch.css";
+import { useNavigate } from "react-router-dom";
 const ToggleSwitch = ({ isChecked, setIsChecked }) => {
+  const navigate = useNavigate();
+
+  const handleSwitchClick = () => {
+    navigate("/");
+  };
   return (
-    <div className="react-switch">
+    <div className="react-switch" onClick={handleSwitchClick}>
       <input
         className="react-switch__checkbox"
         type="checkbox"
