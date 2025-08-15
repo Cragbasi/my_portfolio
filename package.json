@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://cragbasi.github.io/Chijioke",
+  "homepage": "https://cragbasi.github.io/my_website/",
   "scripts": {
     "dev": "vite --open",
     "build": "vite build",
@@ -32,15 +32,15 @@
     "prettier": "^2.8.8",
     "vite": "^5.3.1"
   },
-  "description": "WTWR Project",
+  "description": "My Website",
   "main": "vite.config.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Cragbasi/Chijioke.git"
+    "url": "git+https://cragbasi.github.io/my_website/"
   },
   "author": "Chijioke Agbasi",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Cragbasi/Chijioke/issues"
+    "url": "hhttps://cragbasi.github.io/my_website/issues"
   }
 }
