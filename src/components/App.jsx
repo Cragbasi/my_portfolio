@@ -10,7 +10,7 @@ import { mechanical, software } from "../utils/constants.jsx";
 import Footer from "./Footer";
 
 function App() {
-  const [isChecked, setIsChecked] = useState(false);
+  const [isChecked, setIsChecked] = useState(true);
   const aboutRef = useRef(null);
 
   const scrollToAbout = () => {
