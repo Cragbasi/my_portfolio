@@ -193,7 +193,7 @@ export const software = [
     imageURL: versatally,
     title: "VersaTally – A bluetooth-enabled dual-button tracking device",
     description:
-      "VersaTally is a Bluetooth-enabled dual-button tracking device designed for precise data counting and analysis. Developed in partnership with Intellugo (UK), I supported to the web development and user interface, ensuring seamless integration between hardware and software for an optimized user experience.",
+      "VersaTally is a Bluetooth-enabled dual-button tracking device designed for precise data counting and analysis. Developed in partnership with Intellugo (UK), we developed the web and user interface, ensuring seamless integration between hardware and software for an optimized user experience.",
     techStack: ["React", "Node.js", "CSS Modules", "Google cloud"],
     demoURL: "",
     deployedURL: "versatally.com",

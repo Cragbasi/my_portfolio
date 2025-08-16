@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://cragbasi.github.io/my_website/",
+  "homepage": "https://cragbasi.github.io/my_portfolio/",
   "scripts": {
     "dev": "vite --open",
     "build": "vite build",
@@ -33,15 +33,15 @@
     "prettier": "^2.8.8",
     "vite": "^7.1.2"
   },
-  "description": "My Website",
+  "description": "My portfolio",
   "main": "vite.config.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Cragbasi/my_website.git"
+    "url": "git+https://github.com/Cragbasi/my_portfolio.git"
   },
   "author": "Chijioke Agbasi",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Cragbasi/my_website/issues"
+    "url": "https://github.com/Cragbasi/my_portfolio/issues"
   }
 }
