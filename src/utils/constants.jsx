@@ -4,6 +4,7 @@ import cummins2 from "../assets/portfolio/cummins2.jpg";
 import RBC from "../assets/portfolio/RBC.jpeg";
 import RBC2 from "../assets/portfolio/RBC2.jpeg";
 import rock from "../assets/portfolio/rock.webp";
+import BMW from "../assets/portfolio/BMW.jpg";
 export const mechanical = [
   {
     imageURL: vers,
@@ -19,7 +20,7 @@ export const mechanical = [
     imageURL: smc,
     title: "Lead Mechanical Engineer at SMC Corporation of America",
     description:
-      "Patented Valve Technology & Automation: Led the development of patented valve technology for automation applications, specializing in electro-pneumatic systems. Designed and delivered a pinch valve featuring precision-engineered plastic injection-molded components, including the housing, hinged cover, and pinch blade.Engineered the plastic injection-molded body, push button, and internal structure, ensuring a secure assembly through snap-fits and snap-hooks, eliminating the need for screws.",
+      "Patented Valve Technology & Automation: Led the development of patented valve technology for automation applications, specializing in electro-pneumatic systems. Designed and delivered a pinch valve featuring precision-engineered plastic injection-molded components, including the housing, hinged cover, and pinch blade. Engineered the plastic injection-molded body, push button, and internal structure, ensuring a secure assembly through snap-fits and snap-hooks, eliminating the need for screws.",
     techStack: [
       "SolidWorks",
       "3D Printing",
@@ -113,6 +114,29 @@ export const mechanical = [
       "Six Sigma",
       "Test Fixture Design",
       "Technical Documentation",
+    ],
+    demoURL: "",
+    deployedURL: "",
+  },
+  {
+    imageURL: BMW,
+    title: "Product & Process Engineer at BMW Manufacturing Co.",
+    description:
+      "Accomplished high-precision body-in-white (BIW) process optimization for the BMW X4 launch, as evidenced by the design and implementation of efficient robotic welding stations, fixtures, and conveyor systems by using kinematic motion analysis through cardboard simulation and PackAssist to validate alignment and packaging logistics in CATIA V5",
+    techStack: [
+      "CATIA V5",
+      "Robotic Welding",
+      "PackAssist",
+      "Kinematic Motion Analysis",
+      "Cardboard Simulation",
+      "Conveyor Systems",
+      "Fixture Design",
+      "Process Optimization",
+      "Quality Control",
+      "Lean Manufacturing",
+      "Automation",
+      "Product Engineering",
+      "Continuous Improvement",
     ],
     demoURL: "",
     deployedURL: "",

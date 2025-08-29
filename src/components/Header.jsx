@@ -14,7 +14,7 @@ function Header({ isChecked, setIsChecked, onHomeClick }) {
           <Link to="/">
             <button className="header__home-button" onClick={onHomeClick}>
               {" "}
-              Home
+              About me
             </button>
           </Link>
           <ToggleSwitch

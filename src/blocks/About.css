@@ -89,7 +89,7 @@
   background: #fff;
   box-shadow: 0 0 0 2px #383838;
 }
-
+/* 
 @media screen and (max-width: 320px) {
   .about {
     width: 320px;
@@ -138,4 +138,4 @@
     width: 232px;
     margin: 61px 0 0 40px;
   }
-}
+} */
