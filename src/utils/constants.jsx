@@ -303,10 +303,11 @@ export const slides = [
     description: (
       <>
         " In parallel, my passion for automation and robotics sparked a deep
-        interest in coding. That led me to earn a certificate in Full-Stack
-        Software Engineering at TripleTen, where I mastered tools like React,
-        Node.js, MongoDB, and Express.js. Today, I build responsive web
-        applications, architect backend systems, and develop software that
+        interest in coding. That drove me to complete an intensive 10 month long
+        Software Engineering program at Tripleten and earn a certificate in
+        Full-Stack Software Engineering, mastering JavaScript, React, Node.js,
+        Express.js, and MongoDB. Today, I build intuitive, scalable
+        applications, architect backend systems, and deliver software that
         complements and enhances physical systems."
       </>
     ),
