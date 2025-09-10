@@ -14,7 +14,7 @@ function Main({ isChecked, slides, title }) {
   useEffect(() => {
     const timer = setTimeout(() => {
       setCurrent((prev) => (prev + 1) % total);
-    }, 10);
+    }, 1000);
     return () => clearTimeout(timer);
   }, [current, total]);
 

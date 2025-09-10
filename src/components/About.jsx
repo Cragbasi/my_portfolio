@@ -9,7 +9,7 @@ function About({}) {
   useEffect(() => {
     const timer = setTimeout(() => {
       setCurrent((prev) => (prev + 1) % slides.length);
-    }, 10);
+    }, 1000);
     return () => clearTimeout(timer);
   }, [current]);
   return (
