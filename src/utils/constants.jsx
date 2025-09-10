@@ -303,8 +303,8 @@ export const slides = [
     description: (
       <>
         " In parallel, my passion for automation and robotics sparked a deep
-        interest in coding. That led me to complete a 10-month Full-Stack
-        Software Engineering bootcamp, where I mastered tools like React,
+        interest in coding. That led me to earn a certificate in Full-Stack
+        Software Engineering at TripleTen, where I mastered tools like React,
         Node.js, MongoDB, and Express.js. Today, I build responsive web
         applications, architect backend systems, and develop software that
         complements and enhances physical systems."
