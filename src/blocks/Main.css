@@ -205,6 +205,11 @@
   .main {
     min-width: 320px;
   }
+  .main__title {
+    max-width: 320px;
+    font-size: 30px;
+    line-height: 30px;
+  }
   .slideshow__card {
     max-width: 320px;
   }
