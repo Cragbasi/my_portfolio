@@ -5,6 +5,7 @@ import RBC from "../assets/portfolio/RBC.jpeg";
 import RBC2 from "../assets/portfolio/RBC2.jpeg";
 import rock from "../assets/portfolio/rock.webp";
 import BMW from "../assets/portfolio/BMW.jpg";
+import Extern from "../assets/portfolio/Externship.png";
 export const mechanical = [
   {
     imageURL: vers,
@@ -154,10 +155,26 @@ import spots from "../assets/portfolio/spots.png";
 import confahmLogo from "../assets/ConfahmLogo.jpeg";
 export const software = [
   {
+    imageURL: Extern,
+    title: "Full-Stack Developer at BetterHunt",
+    description:
+      "Built the onboarding entry experience, delivering a polished, responsive welcome screen for a peer-support Health & Wellness Social App— Vura. Developed core backend features including secure authentication, CQRS-based user flows, and persistent real-time messaging (GroupChat / ChatMessage). Scoped and scaffolded an LLM-backed AI chatbot (AiChatSession/AiMessage) designed to stream responses over WebSockets for low-latency conversational UX.",
+    techStack: [
+      "React/Vite",
+      "Node & TypeScript",
+      "Keystone 6",
+      "GraphQL",
+      "Prisma",
+      "MySQL",
+      "WebSockets",
+      "LLM integration",
+    ],
+  },
+  {
     imageURL: news,
     title: "News Explorer",
     description:
-      "A responsive full-stack web app for searching, saving, and managing news articles with user authentication and keyword tracking.",
+      "Engineered a responsive full-stack web app for searching, saving, and managing news articles with user authentication and keyword tracking.",
     techStack: ["React", "Node.js", "Express", "MongoDB", "Vite", "CSS (BEM)"],
     demoURL: "",
     deployedURL: "https://cragbasi.github.io/news_explorer/",
@@ -166,7 +183,7 @@ export const software = [
     imageURL: wtwr,
     title: "What to Wear (WTWR)",
     description:
-      "The What To Wear (WTWR) app is designed to help users manage a database of clothing items based on weather conditions. Users can organize clothing into categories for hot, warm, and cold weather, ensuring they always have the right outfit for any forecast.",
+      "Developed What To Wear (WTWR) app; an app designed to help users manage a database of clothing items based on weather conditions. Users can organize clothing into categories for hot, warm, and cold weather, ensuring they always have the right outfit for any forecast.",
     techStack: [
       "Express.js",
       "React",
@@ -183,14 +200,14 @@ export const software = [
       "Certbot, HTTPS, HTTP",
       "Git",
     ],
-    demoURL: "",
-    deployedURL: "https://www.cragbasi.blinklab.com/",
+    demoURL: "Demo available upon request",
+    deployedURL: "Server down",
   },
   {
     imageURL: spots,
     title: "Spots",
     description:
-      "Spots is a responsive social media profile and image gallery app I built using HTML, CSS (BEM), and JavaScript (OOP, modules). It features profile editing, form validation, modal popups, and an adaptive UI. I used CSS Grid, Flexbox, and JS interactions for seamless UX. A backend could include Node.js, Express, MongoDB, and JWT authentication for scalability.",
+      "Designed the Spots front-end. Spots is a responsive social media profile and image gallery app I built using HTML, CSS (BEM), and JavaScript (OOP, modules). It features profile editing, form validation, modal popups, and an adaptive UI. I used CSS Grid, Flexbox, and JS interactions for seamless UX. A backend could include Node.js, Express, MongoDB, and JWT authentication for scalability.",
     techStack: [
       "React",
       "Vite",
@@ -208,7 +225,7 @@ export const software = [
     imageURL: todo,
     title: "Task Manager",
     description:
-      "Simple To-Do App is a minimalist task management application designed for an intuitive user experience. I developed the front-end using HTML, CSS, and JavaScript, implementing form validation, modal popups, and object-oriented programming (OOP) with JS classes and modules for scalability. The app supports task creation, completion tracking, and interactive UI elements, ensuring seamless usability.",
+      "Developed a Simple To-Do App with a minimalist task management scope, designed for an intuitive user experience. I developed the front-end using HTML, CSS, and JavaScript, implementing form validation, modal popups, and object-oriented programming (OOP) with JS classes and modules for scalability. The app supports task creation, completion tracking, and interactive UI elements, ensuring seamless usability.",
     techStack: ["React", "Redux", "Firebase", "Material UI"],
     demoURL: "https://youtu.be/hWT_rC9YZSc",
     deployedURL: "https://cragbasi.github.io/se_project_todo-app/",
@@ -226,17 +243,17 @@ export const software = [
     imageURL: mywebsite,
     title: "Portfolio Website",
     description:
-      "A personal portfolio showcasing engineering and software projects, built with modern web technologies and responsive design.",
+      "Designed my personal portfolio showcasing some of the engineering and software projects that I have built; built with modern web technologies and responsive design.",
     techStack: ["React", "Vite", "CSS Modules"],
     demoURL: "",
-    deployedURL: "",
+    deployedURL: "https://cragbasi.github.io/my_portfolio/",
   },
 
   {
     imageURL: confahm,
     title: "Confahm – Mechanical, Software, and Product Engineering Solutions",
     description:
-      "Confahm is my personal website, which I designed and manage to provide multidisciplinary engineering services and products. It serves as a hub for mechanical, software, and product engineering solutions, showcasing my expertise in design, automation, and full-stack development. Additionally, I maintain a vlog featuring insights on product development, mechanical systems, and software engineering, bridging innovation across multiple disciplines.",
+      "Confahm is my ECOMAS website that I built in Shopify to provide multidisciplinary engineering services and products. It serves as a hub for mechanical, software, and product engineering solutions, showcasing my expertise in design, automation, and full-stack development. Additionally, I maintain a vlog featuring insights on product development, mechanical systems, and software engineering, bridging innovation across multiple disciplines. The website may be down now for subscription payment.",
     techStack: [
       "JavaScript",
       "Shopify E-commerce platform",
@@ -250,7 +267,7 @@ export const software = [
     imageURL: coffeeshop,
     title: "Coffee Shop",
     description:
-      "The webpage serves as a digital front door for the coffee shop, offering: A welcoming introduction to the café and its mission. A **table booking form** with validation-ready fields. A curated list of **home-brew recipes** for coffee enthusiasts. A detailed **menu** featuring drinks and baked goods. Operating hours and location info. Social media links for community engagement.",
+      "Created this webpage to serve as a digital front door for a coffee shop, offering: A welcoming introduction to the café and its mission. A **table booking form** with validation-ready fields. A curated list of **home-brew recipes** for coffee enthusiasts. A detailed **menu** featuring drinks and baked goods. Operating hours and location info. Social media links for community engagement.",
     techStack: ["HTML/CSS", "JavaScript", "Graphic Design"],
     demoURL: "https://www.youtube.com/watch?v=jPSVqs236v4&t=15s",
     deployedURL: "https://cragbasi.github.io/se_project_coffeeshop/",
@@ -260,7 +277,7 @@ export const software = [
     imageURL: confahmLogo,
     title: "Confahm Logo",
     description:
-      "The Confahm logo is a minimalist design that reflects the multidisciplinary nature of my engineering services, combining elements of mechanical, software, and product engineering.",
+      "Designed the Confahm logo for my brand; as an intent of validation that reflects the confirmed quality of my multidisciplinary nature in engineering services, combining elements of mechanical, software, and product engineering.",
     techStack: ["Adobe Illustrator", "Graphic Design"],
     demoURL: "",
     deployedURL: "",
