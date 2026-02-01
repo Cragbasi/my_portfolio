@@ -204,7 +204,7 @@
 
 @media screen and (max-width: 480px) {
   .main {
-    max-width: 320px;
+    max-width: 480px;
   }
   .main__title {
     max-width: 320px;

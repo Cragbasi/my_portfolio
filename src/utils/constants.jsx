@@ -200,8 +200,6 @@ export const software = [
       "Certbot, HTTPS, HTTP",
       "Git",
     ],
-    demoURL: "Demo available upon request",
-    deployedURL: "Server down",
   },
   {
     imageURL: spots,
@@ -237,7 +235,7 @@ export const software = [
       "VersaTally is a Bluetooth-enabled dual-button tracking device designed for precise data counting and analysis. Developed in partnership with Intellugo (UK), we developed the web and user interface, ensuring seamless integration between hardware and software for an optimized user experience.",
     techStack: ["React", "Node.js", "CSS Modules", "Google cloud"],
     demoURL: "",
-    deployedURL: "versatally.com",
+    deployedURL: "https://versatally.com",
   },
   {
     imageURL: mywebsite,

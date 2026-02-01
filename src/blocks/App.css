@@ -30,7 +30,7 @@ a {
 }
 @media screen and (max-width: 480px) {
   .page {
-    width: 320px;
+    width: 480px;
   }
 }
 @media screen and (max-width: 768px) {
