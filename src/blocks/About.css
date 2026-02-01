@@ -157,7 +157,7 @@
 /* ===========================
    📱 EXTRA SMALL (≤ 480px)
    =========================== */
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 480px) {
   .about__title {
     font-size: 30px;
   }
