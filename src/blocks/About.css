@@ -169,7 +169,7 @@
   }
 
   .about__slide-image {
-    max-width: 320px;
+    max-width: 288px;
   }
 
   .about__description {
@@ -178,6 +178,7 @@
 
   .about__avatar {
     height: 220px;
+    max-width: 288px;
   }
 
   .about__description {

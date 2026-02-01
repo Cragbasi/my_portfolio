@@ -162,7 +162,8 @@
     text-overflow: ellipsis;
 
     max-width: 768px;
-    padding-bottom: 40px;
+    padding: 20px;
+    padding-bottom: 0;
   }
   .slideshow__content {
     padding: 24px 20px;
@@ -207,7 +208,7 @@
   }
   .main__title {
     max-width: 320px;
-    font-size: 30px;
+    font-size: 25px;
     line-height: 30px;
   }
   .slideshow__card {
@@ -225,6 +226,11 @@
   .slideshow__tech {
     font-size: 0.8rem;
     padding: 3px 8px;
+  }
+
+  .slideshow {
+    /* padding-bottom: 0; */
+    margin-bottom: 20ppx;
   }
 
   .slideshow__image-container {

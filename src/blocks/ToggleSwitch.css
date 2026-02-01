@@ -37,8 +37,7 @@
   justify-content: space-between;
   cursor: pointer;
 
-  width: 100%;
-  max-width: 700px;
+  width: 700px;
   height: 60px;
 
   background: #ffffff;
@@ -108,9 +107,15 @@
 /* 📱 MOBILE (≤ 768px) */
 /* -------------------------------------- */
 @media screen and (max-width: 768px) {
+  .react-switch {
+    margin: 0;
+    padding: 0;
+  }
+
   .react-switch__label {
     max-width: 300px;
     height: 48px;
+    margin-bottom: 10px;
   }
 
   .react-switch__label .react-switch__button {
@@ -136,6 +141,9 @@
 
   .react-switch__checkbox_S {
     left: -15px;
+  }
+  .header__nav-bar {
+    gap: 0px;
   }
 }
 
