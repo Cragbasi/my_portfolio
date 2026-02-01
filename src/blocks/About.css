@@ -30,7 +30,7 @@
   line-height: 1.2;
   margin-left: 0px;
   color: white;
-  width: 700px;
+  max-width: 100%;
 }
 
 /* AVATAR */
@@ -45,14 +45,14 @@
   width: 100%;
 
   display: flex;
-  flex-direction: column;
+
   align-items: center;
 }
 
 .about__slide {
   width: 100%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   transition: opacity 0.5s;
@@ -123,10 +123,13 @@
     margin-bottom: 20px;
   }
 
+  .about__slide {
+    flex-direction: column;
+  }
+
   .about__slides {
     width: auto;
     height: auto;
-    flex-direction: column;
     align-items: center;
   }
 
@@ -158,6 +161,9 @@
    📱 EXTRA SMALL (≤ 480px)
    =========================== */
 @media screen and (max-width: 480px) {
+  .about {
+    max-width: 320px;
+  }
   .about__title {
     font-size: 30px;
   }

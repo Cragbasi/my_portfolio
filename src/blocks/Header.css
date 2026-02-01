@@ -89,6 +89,9 @@
 /* 📱 EXTRA SMALL (≤ 480px) */
 /* -------------------------------------- */
 @media screen and (max-width: 480px) {
+  .header {
+    max-width: 320px;
+  }
   .header__logo {
     width: 130px;
     height: 40px;

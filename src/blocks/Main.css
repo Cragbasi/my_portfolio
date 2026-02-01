@@ -136,7 +136,7 @@
 
 @media screen and (max-width: 768px) {
   .main {
-    min-width: 768px;
+    max-width: 768px;
   }
 
   .slideshow__card {
@@ -204,7 +204,7 @@
 
 @media screen and (max-width: 480px) {
   .main {
-    min-width: 320px;
+    max-width: 320px;
   }
   .main__title {
     max-width: 320px;
@@ -231,6 +231,7 @@
   .slideshow {
     /* padding-bottom: 0; */
     margin-bottom: 20ppx;
+    max-width: 320px;
   }
 
   .slideshow__image-container {
