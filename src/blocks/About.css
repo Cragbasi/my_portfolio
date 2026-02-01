@@ -162,7 +162,7 @@
    =========================== */
 @media screen and (max-width: 480px) {
   .about {
-    max-width: 480px;
+    max-width: 400px;
   }
   .about__title {
     font-size: 30px;

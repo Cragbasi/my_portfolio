@@ -15,7 +15,7 @@ export const mechanical = [
     techStack: ["SolidWorks", "3D Printing", "Injection Molding"],
     demoURL:
       "https://www.linkedin.com/posts/agbasi_custom-push-button-design-for-handheld-activity-7334663763792449536-mB9U?utm_source=share&utm_medium=member_desktop&rcm=ACoAABE3dCYBCbVs0yf0fPVH5OkRHwQmoazj9PI",
-    deployedURL: "versatally.com",
+    deployedURL: "https://versatally.com",
   },
   {
     imageURL: smc,
