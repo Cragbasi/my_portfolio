@@ -167,6 +167,10 @@
   .about__slide-selector {
     margin-top: 40px;
   }
+
+  .about__text-container {
+    margin: 0;
+  }
 }
 
 /* ===========================
@@ -193,5 +197,22 @@
 
   .about__avatar {
     height: 220px;
+  }
+
+  .about__slide_active {
+    max-width: 300px;
+    margin: 0;
+    padding: 0;
+    margin-left: -20px;
+  }
+
+  .about__slide {
+    max-width: 300px;
+    margin: 0;
+    padding: 0;
+    margin-left: -20px;
+  }
+  .about__description {
+    max-width: 300px;
   }
 }
