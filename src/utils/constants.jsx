@@ -32,7 +32,7 @@ export const mechanical = [
       "Valve Technology",
     ],
     demoURL: "https://www.smcworld.com/newproducts/en-jp/21/lpv/",
-    deployedURL: "smc.com",
+    deployedURL: "https://smc.com",
   },
   {
     imageURL: rock,
@@ -79,7 +79,7 @@ export const mechanical = [
     ],
     demoURL:
       "https://www.cummins.com/news/releases/2023/02/13/cummins-announces-new-x10-engine-next-fuel-agnostic-series-launching-north",
-    deployedURL: "Cummins.com",
+    deployedURL: "https://cummins.com",
   },
   {
     imageURL: RBC,
@@ -116,8 +116,8 @@ export const mechanical = [
       "Test Fixture Design",
       "Technical Documentation",
     ],
-    demoURL: "",
-    deployedURL: "",
+
+    deployedURL: "https://rbcbearings.com",
   },
   {
     imageURL: BMW,
@@ -139,8 +139,7 @@ export const mechanical = [
       "Product Engineering",
       "Continuous Improvement",
     ],
-    demoURL: "",
-    deployedURL: "",
+    deployedURL: "https://bmw.com",
   },
 ];
 
@@ -259,7 +258,7 @@ export const software = [
       "Liquid",
     ],
     demoURL: "https://www.youtube.com/watch?v=o_n9t1Zc6v4",
-    deployedURL: "Confahm.com",
+    deployedURL: "https://confahm.com",
   },
   {
     imageURL: coffeeshop,
@@ -277,8 +276,6 @@ export const software = [
     description:
       "Designed the Confahm logo for my brand; as an intent of validation that reflects the confirmed quality of my multidisciplinary nature in engineering services, combining elements of mechanical, software, and product engineering.",
     techStack: ["Adobe Illustrator", "Graphic Design"],
-    demoURL: "",
-    deployedURL: "",
   },
 ];
 import avatar from "../assets/Avatar.jpg";
