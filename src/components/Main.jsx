@@ -34,7 +34,7 @@ function Main({ isChecked, slides, title }) {
         />
         <div className="slideshow__card">
           <div className="slideshow__content">
-            <h2 className="slideshow__title">{item.title}</h2>
+            <h2 className="slideshow__title">{item?.title}</h2>
             <p className="slideshow__description">{item.description}</p>
             <ul className="slideshow__techstack">
               {item.techStack.map((tech, idx) => (

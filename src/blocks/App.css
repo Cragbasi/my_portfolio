@@ -23,20 +23,18 @@ a {
   line-height: 24px;
   margin: 0 auto;
   width: 1440px;
-  min-height: 100vh;
+
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
 }
 @media screen and (max-width: 320px) {
-  .main {
-    min-width: 320px;
+  .page {
+    width: 320px;
   }
 }
 @media screen and (max-width: 768px) {
   .page {
-    width: 100%;
-    min-width: 768px;
-    padding: 0;
+    width: 768px;
   }
 }
