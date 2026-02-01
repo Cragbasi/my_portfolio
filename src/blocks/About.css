@@ -1,28 +1,26 @@
 .about {
-  /* height: 624px; */
-  max-width: 100%;
+  width: 100%;
   display: flex;
   flex-direction: row;
   margin: 0 auto;
-  background: linear-gradient(
-    180deg,
-    #606264 0%,
-    /* 20% darker */ #383838 50%,
-    /* base color */ #595959 100% /* 20% lighter */
-  );
+  background: linear-gradient(180deg, #606264 0%, #383838 50%, #595959 100%);
 }
+
+/* TEXT CONTAINER */
 .about__text-container {
   display: flex;
   flex-direction: column;
   margin: 80px 40px 40px;
   width: 100%;
 }
+
 .about__title {
   font-family: "CabinetGrotesk", sans-serif;
   font-size: 40px;
   color: white;
   margin-bottom: 40px;
 }
+
 .about__description {
   display: flex;
   flex-direction: row;
@@ -33,15 +31,16 @@
   margin-left: 24px;
   color: white;
 }
+
+/* AVATAR */
 .about__avatar {
   object-fit: cover;
   height: 464px;
-
   border-radius: 5%;
 }
 
+/* SLIDES */
 .about__slides {
-  position: relative;
   width: 100%;
   min-height: 400px;
   display: flex;
@@ -89,14 +88,87 @@
   background: #fff;
   box-shadow: 0 0 0 2px #383838;
 }
-@media screen and (max-width: 320px) {
+
+/* ===========================
+   📱 MOBILE (≤ 768px)
+   =========================== */
+@media screen and (max-width: 768px) {
   .about {
-    min-width: 320px;
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .about__text-container {
+    margin: 40px 20px 20px;
+  }
+
+  .about__title {
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .about__description {
+    flex-direction: column;
+    font-size: 20px;
+    margin-left: 0;
+    text-align: center;
+    gap: 12px;
+    text-overflow: ellipsis;
+  }
+
+  .about__avatar {
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 20px;
+  }
+
+  .about__slide {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .about__slide-image {
+    margin-right: 0;
+    width: 100%;
+    max-width: 760px;
+  }
+
+  .about__slide-description {
+    max-width: 90%;
+
+    max-width: 768px;
+  }
+
+  .about__slide-selector {
+    margin-top: 40px;
   }
 }
 
-@media screen and (min-width: 321px) and (max-width: 768px) {
-  .about {
-    min-width: 768px;
+/* ===========================
+   📱 EXTRA SMALL (≤ 480px)
+   =========================== */
+@media screen and (max-width: 320px) {
+  .about__title {
+    font-size: 24px;
+  }
+
+  .about__slide-description {
+    max-width: 90%;
+
+    max-width: 320px;
+  }
+
+  .about__slide-image {
+    max-width: 320px;
+  }
+
+  .about__description {
+    font-size: 18px;
+  }
+
+  .about__avatar {
+    height: 220px;
   }
 }

@@ -28,3 +28,15 @@ a {
   flex-direction: column;
   justify-content: flex-start;
 }
+@media screen and (max-width: 320px) {
+  .main {
+    min-width: 320px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .page {
+    width: 100%;
+    min-width: 768px;
+    padding: 0;
+  }
+}
