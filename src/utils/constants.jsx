@@ -32,7 +32,7 @@ export const mechanical = [
       "Valve Technology",
     ],
     demoURL: "https://www.smcworld.com/newproducts/en-jp/21/lpv/",
-    deployedURL: "https://smc.com",
+    deployedURL: "https://www.smcusa.com/",
   },
   {
     imageURL: rock,
@@ -98,8 +98,7 @@ export const mechanical = [
       "Test Fixture Design",
       "Technical Documentation",
     ],
-    demoURL: "",
-    deployedURL: "",
+    deployedURL: "https://rbcbearings.com",
   },
   {
     imageURL: RBC2,
