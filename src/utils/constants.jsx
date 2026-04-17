@@ -175,7 +175,7 @@ export const software = [
     description:
       "Built the full Chi’s Fixerupper platform using React, Tailwind, Shadcn UI, and Framer Motion, with a FastAPI backend and MongoDB persistence, delivering a fully responsive services site with gallery, testimonials, and contact workflows.",
     techStack: [
-      "Python Fast API, React.js, Craco, Tailwind, MongoDB, Shadcn UI, Framer Motion",
+      "Python, Fast API, React.js, Craco, Tailwind, MongoDB, Shadcn UI, Framer Motion",
     ],
     demoURL: "",
     deployedURL: "https://chisfixerupper.com",
