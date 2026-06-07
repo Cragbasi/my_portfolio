@@ -6,7 +6,24 @@ import RBC2 from "../assets/portfolio/RBC2.jpeg";
 import rock from "../assets/portfolio/rock.webp";
 import BMW from "../assets/portfolio/BMW.jpg";
 import Extern from "../assets/portfolio/Externship.png";
+import maybell from "../assets/portfolio/maybell.png";
 export const mechanical = [
+  {
+    imageURL: maybell,
+    title: "Heat Sink System Redesign – Maybell Quantum Industries",
+    description:
+      "Led a full redesign of the waste-heat rejection system, replacing 104 stamped fins with a single extruded 6063-T5 fin block, reducing part count by ~97% and assembly time by ~70%. Boosted thermal efficiency with a +61% increase in fin surface area (343k → 555k mm²) and a unified press-fit architecture delivering ~500% improved contact conductance. Introduced a controlled H6/p6 interference-fit + silver-filled thermal epoxy process for heat pipes, enabling simultaneous multi-pipe insertion with precise GD&T alignment.",
+    techStack: [
+      "SolidWorks",
+      "GD&T",
+      "Thermal Systems",
+      "Heat Sink Design",
+      "Extrusion",
+      "Press-Fit Assembly",
+      "Thermal Epoxy Application",
+    ],
+    demoURL: "https://youtu.be/fLQ5K4ZLNA8?si=dKnFUO3PRQ1w2s-Y",
+  },
   {
     imageURL: vers,
     title: "VersaTally – A bluetooth-enabled dual-button tracking device",
@@ -151,7 +168,7 @@ import wtwr from "../assets/portfolio/wtwr.png";
 import mywebsite from "../assets/portfolio/mywebsite.png";
 import spots from "../assets/portfolio/spots.png";
 import confahmLogo from "../assets/ConfahmLogo.jpeg";
-import chis from "../assets/chis.png";
+import chis from "../assets/portfolio/chis.png";
 export const software = [
   {
     imageURL: Extern,
